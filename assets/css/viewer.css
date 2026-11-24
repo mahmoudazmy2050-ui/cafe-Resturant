@@ -89,7 +89,8 @@ body.viewer {
   background:
     radial-gradient(ellipse 80% 70% at 50% 40%, rgba(209, 121, 79, 0.09), transparent 75%),
     var(--room);
-  touch-action: pan-y;
+  touch-action: none;
+  overscroll-behavior: contain;
 }
 
 .stage-inner {
@@ -229,6 +230,7 @@ body.viewer {
   place-items: center;
   overflow: hidden;
   touch-action: none;
+  overscroll-behavior: contain;
 }
 
 .lightbox-stage img {
@@ -238,7 +240,10 @@ body.viewer {
   transform-origin: center center;
   will-change: transform;
   user-select: none;
+  -webkit-user-select: none;
   -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  touch-action: none;
   cursor: grab;
 }
 .lightbox-stage img.is-panning { cursor: grabbing; }
