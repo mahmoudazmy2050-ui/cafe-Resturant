@@ -17,17 +17,18 @@
 
 ## الملفات
 
-- `dobamina/index.html` — صفحة Dobamina المستقلة (عارض صفحات + زر QR + تحميل PDF).
-- `kalamantina/index.html` — صفحة Kalamantina المستقلة.
-- `<slug>/pages/` — صفحات WebP مضغوطة بجودة عالية.
+- `dobamina/index.html` — الصفحة الجميلة المستقلة لـ Dobamina (غلاف + QR + فتح المنيو + تحميل PDF).
+- `kalamantina/index.html` — الصفحة الجميلة المستقلة لـ Kalamantina.
+- `<slug>/menu/index.html` — عارض الصفحات الخاص بكل منيو.
+- `<slug>/menu/pages/` — صفحات WebP مضغوطة بجودة عالية.
 - `downloads/` — نسخ PDF متحسّنة بنفس أبعاد الأصل للتحميل والطباعة.
 - `assets/qr/` — رمز QR لكل صفحة بدقة 1024×1024، ويظهر أيضاً داخل الصفحة عبر زر QR.
 - `assets/css/viewer.css` و `assets/js/menu-viewer.js` — ملفات تشغيل داخلية مشتركة، غير مرتبطة ببعضها من حيث العرض.
 
 ## تحديث منيو لاحقاً
 
-1. استبدل الصور داخل `<slug>/pages/` مع الحفاظ على أسماء `page-01.webp` ... إلخ.
-2. حدّث `data-count` وعدد الصفحة في `<slug>/index.html` ووصف الـ meta.
+1. استبدل الصور داخل `<slug>/menu/pages/` مع الحفاظ على أسماء `page-01.webp` ... إلخ.
+2. حدّث `data-count` في `<slug>/menu/index.html`، وعدد الصفحات في `<slug>/index.html` ووصف الـ meta.
 3. استبدل ملف الـ PDF في `downloads/`.
 4. إذا تغيّر الرابط، أعد توليد رمز QR في `assets/qr/`.
 

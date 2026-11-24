@@ -2,74 +2,85 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#1d1510">
-  <meta name="description" content="منيو Kalamantina — 28 صفحة قابلة للتقليب والتكبير على كل الشاشات.">
-  <title>Kalamantina | المنيو</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#241A14">
+  <meta name="description" content="منيو Kalamantina — 28 صفحة، افتح المنيو أو امسح رمز QR.">
+  <title>Kalamantina | مِنيو</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="pages/page-01.webp">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23241a14'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23d1794f' font-family='serif'%3E%D9%85%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="../assets/css/viewer.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23241a14'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7efe3' font-family='serif'%3E%D9%85%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .menu-grid { max-width: 640px; }
+    .menu-card.is-portrait .card-media img { object-position: center 12%; }
+  </style>
 </head>
-<body class="viewer" data-menu-viewer data-slug="kalamantina" data-label="Kalamantina" data-count="28">
-  <div class="viewer-shell">
-    <header class="viewer-topbar">
-      <div class="viewer-brand"><span class="brand-mark" aria-hidden="true">K</span><span>قائمة الطعام</span></div>
-      <div class="viewer-title"><strong>Kalamantina</strong><small>MENU</small></div>
-      <div class="page-counter" id="pageCounter" aria-live="polite">01 / 28</div>
+<body>
+  <div class="page-wrap">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="الرئيسية">
+        <span class="brand-stamp" aria-hidden="true"><span>م</span></span>
+        <span class="brand-text"><strong>مِنيو</strong><small>MENUS</small></span>
+      </a>
+      <p class="header-note">اطبع · امسح · اطلب</p>
     </header>
 
-    <main class="stage" id="stage">
-      <div class="stage-inner" id="stageInner">
-        <img id="pageImage" src="pages/page-01.webp" alt="صفحة 1 من منيو Kalamantina" draggable="false">
-      </div>
-      <button class="nav-arrow nav-prev" id="prevTop" type="button" aria-label="الصفحة السابقة">→</button>
-      <button class="nav-arrow nav-next" id="nextTop" type="button" aria-label="الصفحة التالية">←</button>
-      <p class="stage-hint">اسحب لتقليب الصفحات · اضغط على الصفحة للتكبير</p>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">قائمة الطعام · 28 صفحة</p>
+          <h1 id="hero-title">Kalamantina<br><em>جاهزة للطلب.</em></h1>
+          <p class="hero-lede">منيو رأسي كامل بعرض واضح على أي جوال أو شاشة. افتح الصفحات، قلّب بينها، واعمل زوم لقراءة التفاصيل.</p>
+        </div>
+        <div class="hero-mark" aria-hidden="true">
+          <span class="ring ring-1"></span>
+          <span class="ring ring-2"></span>
+          <span class="ring ring-3"></span>
+          <span class="mark-label">MENU<br>№ 02</span>
+        </div>
+      </section>
+
+      <section class="section-head" aria-labelledby="menu-title">
+        <div>
+          <p class="eyebrow">المنيو</p>
+          <h2 id="menu-title">Kalamantina</h2>
+        </div>
+        <p class="section-count">02 / 02</p>
+      </section>
+
+      <section class="menu-grid" aria-label="منيو Kalamantina">
+        <article class="menu-card is-portrait">
+          <div class="card-media">
+            <img src="../assets/covers/kalamantina.webp" alt="صورة غلاف منيو Kalamantina" width="1400" height="1979" loading="lazy" decoding="async">
+            <span class="card-index" aria-hidden="true">02</span>
+          </div>
+          <div class="card-body">
+            <p class="card-kicker">قائمة الطعام · رأسية</p>
+            <h3>Kalamantina</h3>
+            <p class="card-meta">28 صفحة · العرض بالرأسي · قابلة للتكبير</p>
+            <div class="card-actions">
+              <a class="btn btn-primary" href="menu/">افتح المنيو <span class="btn-arrow" aria-hidden="true">←</span></a>
+              <a class="btn btn-quiet" href="../downloads/Kalamantina_Menu_compressed.pdf" download>تحميل PDF</a>
+            </div>
+            <div class="qr-block">
+              <img src="../assets/qr/kalamantina-qr.png" alt="رمز QR لفتح منيو Kalamantina مباشرة" width="88" height="88" loading="lazy">
+              <div class="qr-copy"><strong>امسح للفتح مباشرة</strong><span>الرمز يفتح هذه الصفحة على جوالك بدون بحث</span></div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <aside class="print-tip">
+        <span class="print-tip-mark" aria-hidden="true">✳</span>
+        <div><strong>للاستخدام داخل المقهى</strong><p>اطبع رمز QR وضعه على الطاولة — الزبون يمسحه فيفتح منيو Kalamantina على مقاس شاشته مباشرة.</p></div>
+      </aside>
     </main>
 
-    <footer class="viewer-controls">
-      <button class="control" id="prevBottom" type="button" aria-label="الصفحة السابقة">→ <span class="control-text">السابق</span></button>
-      <label class="jump"><span>صفحة</span><input id="pageJump" type="number" min="1" max="28" value="1" inputmode="numeric" aria-label="الانتقال إلى صفحة"></label>
-      <button class="control" id="nextBottom" type="button" aria-label="الصفحة التالية"><span class="control-text">التالي</span> ←</button>
-      <span class="control-divider" aria-hidden="true"></span>
-      <button class="control control-accent" id="zoomBtn" type="button">تكبير +</button>
-      <button class="control" id="qrBtn" type="button" aria-label="إظهار رمز QR">QR</button>
-      <a class="control" href="../downloads/Kalamantina_Menu_compressed.pdf" download>تحميل PDF</a>
+    <footer class="site-footer">
+      <p>Kalamantina — نسخة سريعة للجوال</p>
+      <p>صور مضغوطة بجودة عالية · تحميل اختياري للـ PDF</p>
     </footer>
   </div>
-
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصفحة مكبّرة" hidden>
-    <div class="lightbox-bar">
-      <div class="lightbox-tools">
-        <button class="control" id="lightboxPrev" type="button" aria-label="الصفحة السابقة">→</button>
-        <span id="lightboxCounter">01 / 28</span>
-        <button class="control" id="lightboxNext" type="button" aria-label="الصفحة التالية">←</button>
-      </div>
-      <div class="lightbox-tools">
-        <button class="control" id="zoomOut" type="button" aria-label="تصغير">−</button>
-        <span class="zoom-level" id="zoomLevel">100%</span>
-        <button class="control" id="zoomIn" type="button" aria-label="تكبير">+</button>
-        <button class="control" id="zoomReset" type="button">إعادة</button>
-        <button class="control control-accent" id="closeLightbox" type="button" aria-label="إغلاق العرض"><span class="close-text">إغلاق</span> ✕</button>
-      </div>
-    </div>
-    <div class="lightbox-stage" id="lightboxStage">
-      <img id="lightboxImage" src="pages/page-01.webp" alt="صفحة مكبّرة من منيو Kalamantina" draggable="false">
-    </div>
-  </div>
-
-  <div class="qr-overlay" id="qrOverlay" hidden>
-    <div class="qr-panel" role="dialog" aria-modal="true" aria-label="رمز QR لمنيو Kalamantina">
-      <button class="control qr-close" id="qrClose" type="button" aria-label="إغلاق">✕</button>
-      <img src="../assets/qr/kalamantina-qr.png" alt="رمز QR لفتح منيو Kalamantina" width="256" height="256">
-      <strong>Kalamantina</strong>
-      <p>امسح الرمز لفتح المنيو على جوالك</p>
-    </div>
-  </div>
-
-  <script src="../assets/js/menu-viewer.js" defer></script>
 </body>
 </html>
