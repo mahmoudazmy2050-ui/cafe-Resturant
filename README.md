@@ -10,7 +10,7 @@
 | Dobamina | https://mahmoudazmy2050-ui.github.io/cafe-Resturant/dobamina/ |
 | Kalamantina | https://mahmoudazmy2050-ui.github.io/cafe-Resturant/kalamantina/ |
 
-> رموز QR المطبوعة تشير إلى الرابطين نفسهما مع `?v=4` لتفادي نسخة المتصفح القديمة المحفوظة (Cache-Control: max-age=600). الرابط بدون البارامتر يعمل بشكل طبيعي بعد انتهاء مدة الحفظ.
+> رموز QR المطبوعة تشير إلى الرابطين نفسهما مع `?v=5` لتفادي نسخة المتصفح القديمة المحفوظة (Cache-Control: max-age=600). الرابط بدون البارامتر يعمل بشكل طبيعي بعد انتهاء مدة الحفظ.
 
 ## تفعيل النشر
 

@@ -108,6 +108,8 @@ main {
   overflow: hidden;
 }
 
+.menu-card.is-portrait { grid-template-columns: minmax(240px, 42%) minmax(0, 1fr); }
+
 .menu-card:hover { box-shadow: 0 26px 55px -28px rgba(36, 26, 20, 0.7); }
 
 .card-media {
@@ -128,7 +130,12 @@ main {
   display: block;
 }
 
-.is-portrait .card-media img { object-position: center 12%; }
+.is-portrait .card-media { background: linear-gradient(160deg, var(--paper-deep), #f1e6d6); }
+.is-portrait .card-media img {
+  object-fit: contain;
+  object-position: center;
+  padding: 0.6rem;
+}
 
 .card-index {
   position: absolute;
@@ -232,6 +239,8 @@ main {
     border-bottom: 1px solid var(--line);
   }
   .card-body { min-height: calc(100% - clamp(100px, 22vh, 190px)); padding: clamp(0.8rem, 2.2vh, 1.2rem); }
+  .is-portrait .card-media { height: clamp(190px, 36vh, 300px); }
+  .is-portrait .card-body { min-height: calc(100% - clamp(190px, 36vh, 300px)); }
   .card-body h3 { font-size: clamp(1.4rem, 4vh, 1.9rem); }
   .btn { min-height: 44px; padding-inline: 0.9rem; }
   .qr-block img { width: 64px; height: 64px; }
@@ -240,6 +249,8 @@ main {
 @media (max-height: 620px) {
   .card-media { height: clamp(74px, 18vh, 110px); }
   .card-body { min-height: calc(100% - clamp(74px, 18vh, 110px)); }
+  .is-portrait .card-media { height: clamp(150px, 34vh, 210px); }
+  .is-portrait .card-body { min-height: calc(100% - clamp(150px, 34vh, 210px)); }
   .card-index { font-size: 2.4rem; }
   .qr-block img { width: 54px; height: 54px; }
   .qr-copy span { display: none; }
