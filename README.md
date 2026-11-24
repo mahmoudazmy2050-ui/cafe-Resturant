@@ -6,6 +6,7 @@
 
 | المنيو | الرابط |
 | --- | --- |
+| صفحة دخول بسيطة (روابط فقط) | https://mahmoudazmy2050-ui.github.io/cafe-Resturant/ |
 | Dobamina | https://mahmoudazmy2050-ui.github.io/cafe-Resturant/dobamina/ |
 | Kalamantina | https://mahmoudazmy2050-ui.github.io/cafe-Resturant/kalamantina/ |
 
