@@ -12,6 +12,15 @@
 
 > رموز QR المطبوعة تشير إلى الرابطين نفسهما مع `?v=5` لتفادي نسخة المتصفح القديمة المحفوظة (Cache-Control: max-age=600). الرابط بدون البارامتر يعمل بشكل طبيعي بعد انتهاء مدة الحفظ.
 
+## كيور ارات تحميل PDF مباشر
+
+ملفان منفصلان عن كيور الصفحات (اللي بتفتح اللاندنج):
+
+- `assets/qr/dobamina-pdf-qr.png` → `https://raw.githubusercontent.com/mahmoudazmy2050-ui/cafe-Resturant/main/downloads/Dobamina_Menu_compressed.pdf`
+- `assets/qr/kalamantina-pdf-qr.png` → `https://raw.githubusercontent.com/mahmoudazmy2050-ui/cafe-Resturant/main/downloads/Kalamantina_Menu_compressed.pdf`
+
+روابط `raw.githubusercontent.com` بترجع بصيغة `application/octet-stream`، فالجوال بينزّل الملف فور مسح الرمز. رابط PDF على GitHub Pages بيفتح عارض PDF جوه المتصفح بدل التحميل المباشر. لو اتغيّر اسم الملف أو الفرع، لازم تتولّد الكيورات دي من جديد.
+
 ## تفعيل النشر
 
 من `Settings → Pages`: اختر **Deploy from a branch**، ثم `main` و `/ (root)`، واحفظ.
