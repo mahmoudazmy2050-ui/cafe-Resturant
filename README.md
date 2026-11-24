@@ -21,6 +21,15 @@
 
 روابط `raw.githubusercontent.com` بترجع بصيغة `application/octet-stream`، فالجوال بينزّل الملف فور مسح الرمز. رابط PDF على GitHub Pages بيفتح عارض PDF جوه المتصفح بدل التحميل المباشر. لو اتغيّر اسم الملف أو الفرع، لازم تتولّد الكيورات دي من جديد.
 
+## كيور ارات عرض PDF جوه المتصفح
+
+ملفان كمان للعرض بدون تحميل:
+
+- `assets/qr/dobamina-view-qr.png` → `https://mahmoudazmy2050-ui.github.io/cafe-Resturant/downloads/Dobamina_Menu_compressed.pdf`
+- `assets/qr/kalamantina-view-qr.png` → `https://mahmoudazmy2050-ui.github.io/cafe-Resturant/downloads/Kalamantina_Menu_compressed.pdf`
+
+دي بترجع بصيغة `application/pdf`، فالمتصفح يفتح عارض PDF مباشرة من غير ما ينزّل الملف.
+
 ## تفعيل النشر
 
 من `Settings → Pages`: اختر **Deploy from a branch**، ثم `main` و `/ (root)`، واحفظ.
