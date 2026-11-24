@@ -4,25 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#1d1510">
-  <meta name="description" content="منيو Dobamina — 17 صفحة قابلة للتقليب والتكبير على كل الشاشات.">
-  <title>Dobamina | المنيو</title>
+  <meta name="description" content="منيو Kalamantina — 28 صفحة قابلة للتقليب والتكبير على كل الشاشات.">
+  <title>Kalamantina | المنيو</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="pages/page-01.webp">
-  <link rel="stylesheet" href="../../assets/css/viewer.css">
+  <link rel="stylesheet" href="../assets/css/viewer.css">
 </head>
-<body class="viewer" data-menu-viewer data-slug="dobamina" data-label="Dobamina" data-count="17">
+<body class="viewer" data-menu-viewer data-slug="kalamantina" data-label="Kalamantina" data-count="28">
   <div class="viewer-shell">
     <header class="viewer-topbar">
-      <a class="back-link" href="../../">← كل المنيوهات</a>
-      <div class="viewer-title"><strong>Dobamina</strong><small>قائمة الطعام</small></div>
-      <div class="page-counter" id="pageCounter" aria-live="polite">01 / 17</div>
+      <div class="viewer-brand"><span class="brand-mark" aria-hidden="true">K</span><span>قائمة الطعام</span></div>
+      <div class="viewer-title"><strong>Kalamantina</strong><small>MENU</small></div>
+      <div class="page-counter" id="pageCounter" aria-live="polite">01 / 28</div>
     </header>
 
     <main class="stage" id="stage">
       <div class="stage-inner" id="stageInner">
-        <img id="pageImage" src="pages/page-01.webp" alt="صفحة 1 من منيو Dobamina" draggable="false">
+        <img id="pageImage" src="pages/page-01.webp" alt="صفحة 1 من منيو Kalamantina" draggable="false">
       </div>
       <button class="nav-arrow nav-prev" id="prevTop" type="button" aria-label="الصفحة السابقة">→</button>
       <button class="nav-arrow nav-next" id="nextTop" type="button" aria-label="الصفحة التالية">←</button>
@@ -31,11 +31,12 @@
 
     <footer class="viewer-controls">
       <button class="control" id="prevBottom" type="button" aria-label="الصفحة السابقة">→ <span class="control-text">السابق</span></button>
-      <label class="jump"><span>صفحة</span><input id="pageJump" type="number" min="1" max="17" value="1" inputmode="numeric" aria-label="الانتقال إلى صفحة"></label>
+      <label class="jump"><span>صفحة</span><input id="pageJump" type="number" min="1" max="28" value="1" inputmode="numeric" aria-label="الانتقال إلى صفحة"></label>
       <button class="control" id="nextBottom" type="button" aria-label="الصفحة التالية"><span class="control-text">التالي</span> ←</button>
       <span class="control-divider" aria-hidden="true"></span>
       <button class="control control-accent" id="zoomBtn" type="button">تكبير +</button>
-      <a class="control" href="../../downloads/Dobamina_Menu_compressed.pdf" download>تحميل PDF</a>
+      <button class="control" id="qrBtn" type="button" aria-label="إظهار رمز QR">QR</button>
+      <a class="control" href="../downloads/Kalamantina_Menu_compressed.pdf" download>تحميل PDF</a>
     </footer>
   </div>
 
@@ -43,7 +44,7 @@
     <div class="lightbox-bar">
       <div class="lightbox-tools">
         <button class="control" id="lightboxPrev" type="button" aria-label="الصفحة السابقة">→</button>
-        <span id="lightboxCounter">01 / 17</span>
+        <span id="lightboxCounter">01 / 28</span>
         <button class="control" id="lightboxNext" type="button" aria-label="الصفحة التالية">←</button>
       </div>
       <div class="lightbox-tools">
@@ -55,10 +56,19 @@
       </div>
     </div>
     <div class="lightbox-stage" id="lightboxStage">
-      <img id="lightboxImage" src="pages/page-01.webp" alt="صفحة مكبّرة من منيو Dobamina" draggable="false">
+      <img id="lightboxImage" src="pages/page-01.webp" alt="صفحة مكبّرة من منيو Kalamantina" draggable="false">
     </div>
   </div>
 
-  <script src="../../assets/js/menu-viewer.js" defer></script>
+  <div class="qr-overlay" id="qrOverlay" hidden>
+    <div class="qr-panel" role="dialog" aria-modal="true" aria-label="رمز QR لمنيو Kalamantina">
+      <button class="control qr-close" id="qrClose" type="button" aria-label="إغلاق">✕</button>
+      <img src="../assets/qr/kalamantina-qr.png" alt="رمز QR لفتح منيو Kalamantina" width="256" height="256">
+      <strong>Kalamantina</strong>
+      <p>امسح الرمز لفتح المنيو على جوالك</p>
+    </div>
+  </div>
+
+  <script src="../assets/js/menu-viewer.js" defer></script>
 </body>
 </html>

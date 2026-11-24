@@ -1,14 +1,13 @@
-# مِنيو — قوائم الطعام
+# مِنيو — صفحتان مستقلتان
 
-موقع ثابت على GitHub Pages يعرض قائمتَي الطعام بروابط مستقلة ورموز QR جاهزة للطباعة.
+صفحتان منفصلتان تماماً، لكل واحدة رابطها ورمز QR خاص بها. لا توجد صفحة تجمعهما معاً ولا روابط بينهما.
 
 ## الروابط بعد تفعيل Pages
 
-| المحتوى | الرابط |
+| المنيو | الرابط |
 | --- | --- |
-| الصفحة الرئيسية | https://mahmoudazmy2050-ui.github.io/cafe-Resturant/ |
-| منيو Dobamina | https://mahmoudazmy2050-ui.github.io/cafe-Resturant/menus/dobamina/ |
-| منيو Kalamantina | https://mahmoudazmy2050-ui.github.io/cafe-Resturant/menus/kalamantina/ |
+| Dobamina | https://mahmoudazmy2050-ui.github.io/cafe-Resturant/dobamina/ |
+| Kalamantina | https://mahmoudazmy2050-ui.github.io/cafe-Resturant/kalamantina/ |
 
 ## تفعيل النشر
 
@@ -17,17 +16,18 @@
 
 ## الملفات
 
-- `index.html` — الصفحة الرئيسية والبطاقات وأكواد QR.
-- `menus/<slug>/index.html` — عارض الصفحات (تقليب، سحب، زوم، تحميل PDF).
-- `menus/<slug>/pages/` — صفحات WebP مضغوطة بجودة عالية.
+- `dobamina/index.html` — صفحة Dobamina المستقلة (عارض صفحات + زر QR + تحميل PDF).
+- `kalamantina/index.html` — صفحة Kalamantina المستقلة.
+- `<slug>/pages/` — صفحات WebP مضغوطة بجودة عالية.
 - `downloads/` — نسخ PDF متحسّنة بنفس أبعاد الأصل للتحميل والطباعة.
-- `assets/qr/` — رموز QR بصيغة PNG بدقة 1024×1024 لتُطبع على الطاولات.
+- `assets/qr/` — رمز QR لكل صفحة بدقة 1024×1024، ويظهر أيضاً داخل الصفحة عبر زر QR.
+- `assets/css/viewer.css` و `assets/js/menu-viewer.js` — ملفات تشغيل داخلية مشتركة، غير مرتبطة ببعضها من حيث العرض.
 
 ## تحديث منيو لاحقاً
 
-1. استبدل الصور داخل `menus/<slug>/pages/` مع الحفاظ على أسماء `page-01.webp` ... إلخ.
-2. حدّث `data-count` وعدد الصفحة في `menus/<slug>/index.html` و `index.html` ووصف الـ meta.
-3. استبدل ملف الـ PDF في `downloads/` وصورة الغلاف في `assets/covers/`.
-4. إذا تغيّر الرابط، أعد توليد رمز QR من `assets/qr/`.
+1. استبدل الصور داخل `<slug>/pages/` مع الحفاظ على أسماء `page-01.webp` ... إلخ.
+2. حدّث `data-count` وعدد الصفحة في `<slug>/index.html` ووصف الـ meta.
+3. استبدل ملف الـ PDF في `downloads/`.
+4. إذا تغيّر الرابط، أعد توليد رمز QR في `assets/qr/`.
 
 الأصول الأصلية غير المضغوطة محفوظة محلياً في `_backup_originals` خارج هذا الريبو.

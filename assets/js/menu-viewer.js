@@ -32,6 +32,9 @@
     zoomReset: $("zoomReset"),
     zoomLevel: $("zoomLevel"),
     close: $("closeLightbox"),
+    qrBtn: $("qrBtn"),
+    qrOverlay: $("qrOverlay"),
+    qrClose: $("qrClose"),
   };
 
   let current = 0;
@@ -134,6 +137,16 @@
     ui.stageInner.focus?.();
   }
 
+  function openQr() {
+    ui.qrOverlay.hidden = false;
+    ui.qrClose.focus();
+  }
+
+  function closeQr() {
+    ui.qrOverlay.hidden = true;
+    ui.qrBtn.focus();
+  }
+
   ui.image.addEventListener("load", () => ui.image.classList.remove("is-loading"));
   [ui.prevTop, ui.prevBottom, ui.lightboxPrev].forEach((el) =>
     el.addEventListener("click", () => step(-1))
@@ -170,6 +183,10 @@
 
   document.addEventListener("keydown", (e) => {
     if (document.activeElement === ui.jump) return;
+    if (!ui.qrOverlay.hidden) {
+      if (e.key === "Escape") { e.preventDefault(); closeQr(); }
+      return;
+    }
     if (e.key === "ArrowLeft") step(1);
     else if (e.key === "ArrowRight") step(-1);
     else if (e.key === "Home") goTo(0);
@@ -183,6 +200,11 @@
 
   ui.zoom.addEventListener("click", openLightbox);
   ui.close.addEventListener("click", closeLightbox);
+  ui.qrBtn.addEventListener("click", openQr);
+  ui.qrClose.addEventListener("click", closeQr);
+  ui.qrOverlay.addEventListener("click", (e) => {
+    if (e.target === ui.qrOverlay) closeQr();
+  });
   ui.zoomIn.addEventListener("click", () => setScale(scale + 0.25));
   ui.zoomOut.addEventListener("click", () => setScale(scale - 0.25));
   ui.zoomReset.addEventListener("click", resetZoom);
