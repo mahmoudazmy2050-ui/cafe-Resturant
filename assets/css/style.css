@@ -1,4 +1,4 @@
-/* Landing page — warm editorial cafe menu (compact, no-scroll) */
+/* Landing page — warm editorial cafe menu (fills the screen, no scroll) */
 :root {
   --ink: #241a14;
   --ink-soft: #514136;
@@ -19,7 +19,8 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
@@ -50,16 +51,21 @@ a { color: inherit; }
 }
 
 .page-wrap {
-  width: min(900px, 100% - clamp(1rem, 5vw, 3rem));
-  min-height: 100dvh;
+  width: min(960px, 100% - clamp(1rem, 5vw, 3rem));
+  height: 100dvh;
   margin-inline: auto;
-  padding-block: clamp(0.75rem, 2vh, 1.25rem);
+  padding-block: clamp(0.75rem, 2.5vh, 1.5rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
-main { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 0.9rem); }
+main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1.8vh, 1.1rem);
+}
 
 /* Section heading */
 .section-head {
@@ -67,7 +73,7 @@ main { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 0.9rem);
   align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
-  padding-bottom: 0.45rem;
+  padding-bottom: clamp(0.4rem, 1.2vh, 0.8rem);
   border-bottom: 2px solid var(--ink);
   animation: rise 0.6s ease both;
 }
@@ -75,7 +81,7 @@ main { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 0.9rem);
 .section-head h2 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.8rem);
+  font-size: clamp(2rem, 3.2vh + 1.4vw, 3.4rem);
   font-weight: 700;
   line-height: 1.15;
 }
@@ -84,15 +90,17 @@ main { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 0.9rem);
   margin: 0;
   color: var(--clay);
   font-family: var(--font-display);
-  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  font-size: clamp(1.05rem, 2.2vh, 1.5rem);
 }
 
 /* Card */
-.menu-grid { margin: 0; animation: rise 0.7s 0.08s ease both; }
+.menu-grid { flex: 1; min-height: 0; display: flex; animation: rise 0.7s 0.08s ease both; }
 
 .menu-card {
+  flex: 1;
+  min-height: 0;
   display: grid;
-  grid-template-columns: minmax(180px, 36%) minmax(0, 1fr);
+  grid-template-columns: minmax(190px, 36%) minmax(0, 1fr);
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 3px;
@@ -104,7 +112,7 @@ main { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 0.9rem);
 
 .card-media {
   position: relative;
-  min-height: 210px;
+  min-height: 0;
   overflow: hidden;
   background: var(--paper-deep);
   border-inline-end: 1px solid var(--line);
@@ -124,10 +132,10 @@ main { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 0.9rem);
 
 .card-index {
   position: absolute;
-  inset-inline-start: 0.8rem;
+  inset-inline-start: 1rem;
   bottom: -0.35rem;
   font-family: var(--font-display);
-  font-size: 3.4rem;
+  font-size: clamp(2.6rem, 6vh, 4.4rem);
   line-height: 1;
   color: var(--card);
   text-shadow: 0 2px 0 var(--line);
@@ -135,15 +143,17 @@ main { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 0.9rem);
 }
 
 .card-body {
-  padding: clamp(0.75rem, 2vw, 1.2rem) clamp(0.85rem, 2.4vw, 1.4rem);
+  min-height: 0;
+  padding: clamp(0.9rem, 2.6vh, 1.8rem) clamp(1rem, 3vw, 1.8rem);
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  justify-content: center;
+  gap: clamp(0.35rem, 1.4vh, 0.9rem);
 }
 
 .card-kicker {
   margin: 0;
-  font-size: 0.66rem;
+  font-size: clamp(0.68rem, 1.5vh, 0.82rem);
   color: var(--olive);
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -152,24 +162,28 @@ main { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 0.9rem);
 .card-body h3 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 2.8vh + 0.8vw, 2.5rem);
   line-height: 1.15;
 }
 
-.card-meta { margin: 0; color: var(--ink-soft); font-size: clamp(0.75rem, 1.5vw, 0.85rem); }
+.card-meta {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(0.8rem, 1.7vh, 0.98rem);
+}
 
-.card-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.35rem; }
+.card-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: clamp(0.2rem, 1vh, 0.7rem); }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
-  min-height: 40px;
-  padding: 0.35rem 0.9rem;
+  gap: 0.5rem;
+  min-height: clamp(42px, 5.6vh, 56px);
+  padding: 0.4rem 1.1rem;
   border-radius: 2px;
   font: inherit;
-  font-size: 0.84rem;
+  font-size: clamp(0.85rem, 1.7vh, 1rem);
   font-weight: 700;
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
@@ -180,30 +194,30 @@ main { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 0.9rem);
 .btn-primary:hover { background: var(--clay); }
 .btn-quiet { border: 1px solid var(--line); color: var(--ink); background: transparent; }
 .btn-quiet:hover { background: var(--paper-deep); }
-.btn-arrow { font-size: 1.05rem; line-height: 1; }
+.btn-arrow { font-size: 1.15rem; line-height: 1; }
 
 .qr-block {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  margin-top: auto;
-  padding-top: 0.55rem;
+  gap: 0.9rem;
+  margin-top: clamp(0.3rem, 1.4vh, 0.9rem);
+  padding-top: clamp(0.5rem, 1.6vh, 1rem);
   border-top: 1px dashed var(--line);
 }
 
 .qr-block img {
-  width: 58px;
-  height: 58px;
+  width: clamp(64px, 9vh, 100px);
+  height: clamp(64px, 9vh, 100px);
   flex: none;
-  padding: 3px;
+  padding: 4px;
   background: #fff;
   border: 1px solid var(--line);
   image-rendering: pixelated;
 }
 
-.qr-copy { display: flex; flex-direction: column; gap: 0.1rem; }
-.qr-copy strong { font-size: 0.82rem; }
-.qr-copy span { color: var(--ink-soft); font-size: 0.7rem; line-height: 1.45; }
+.qr-copy { display: flex; flex-direction: column; gap: 0.15rem; }
+.qr-copy strong { font-size: clamp(0.85rem, 1.8vh, 1.05rem); }
+.qr-copy span { color: var(--ink-soft); font-size: clamp(0.72rem, 1.5vh, 0.86rem); line-height: 1.5; }
 
 @keyframes rise {
   from { opacity: 0; transform: translateY(12px); }
@@ -213,24 +227,27 @@ main { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 0.9rem);
 @media (max-width: 520px) {
   .menu-card { display: block; }
   .card-media {
-    min-height: 0;
-    height: clamp(90px, 15vh, 130px);
+    height: clamp(100px, 22vh, 190px);
     border-inline-end: 0;
     border-bottom: 1px solid var(--line);
   }
-  .card-index { font-size: 2.6rem; bottom: -0.3rem; }
-  .card-body { padding: 0.6rem 0.75rem; }
-  .card-body h3 { font-size: 1.25rem; }
-  .btn { min-height: 34px; font-size: 0.76rem; padding: 0.3rem 0.65rem; }
-  .qr-block img { width: 50px; height: 50px; }
-  .qr-copy span { font-size: 0.66rem; }
+  .card-body { min-height: calc(100% - clamp(100px, 22vh, 190px)); padding: clamp(0.8rem, 2.2vh, 1.2rem); }
+  .card-body h3 { font-size: clamp(1.4rem, 4vh, 1.9rem); }
+  .btn { min-height: 44px; padding-inline: 0.9rem; }
+  .qr-block img { width: 64px; height: 64px; }
 }
 
 @media (max-height: 620px) {
-  .card-media { height: 72px; min-height: 0; }
-  .card-index { font-size: 2.1rem; }
-  .qr-block { padding-top: 0.35rem; }
-  .qr-block img { width: 46px; height: 46px; }
+  .card-media { height: clamp(74px, 18vh, 110px); }
+  .card-body { min-height: calc(100% - clamp(74px, 18vh, 110px)); }
+  .card-index { font-size: 2.4rem; }
+  .qr-block img { width: 54px; height: 54px; }
+  .qr-copy span { display: none; }
+}
+
+@media (max-height: 520px) {
+  body { height: auto; min-height: 100dvh; overflow: auto; }
+  .page-wrap { height: auto; min-height: 100dvh; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -239,8 +256,8 @@ main { display: flex; flex-direction: column; gap: clamp(0.5rem, 1.5vh, 0.9rem);
 }
 
 @media print {
-  body { background: #fff; }
+  body { height: auto; overflow: visible; background: #fff; }
   body::before, .card-actions { display: none; }
-  .page-wrap { width: 100%; }
+  .page-wrap { width: 100%; height: auto; }
   .menu-card { break-inside: avoid; box-shadow: none; }
 }
